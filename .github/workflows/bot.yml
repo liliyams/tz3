@@ -1,0 +1,22 @@
+name: Auto testing
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+    steps:
+        - uses: actions/checkout@v2
+        - name: Set up all python versions
+          uses: actions/setup-python@v2
+          with:
+            python-version: ${{ matrix.python-version }}
+            architecture: x64
+        - name: Run test
+          run: python -m unittest discover .
+        - name: Run bot
+          env:
+            ID: ${{ secrets.ID }}
+            TOKEN: ${{ secrets.TOKEN }}
+          run: python tg_bot
