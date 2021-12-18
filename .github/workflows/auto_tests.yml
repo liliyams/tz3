@@ -1,4 +1,4 @@
-name: Manual testing
+name: Auto testing
 on: [push]
 jobs:
   build:
