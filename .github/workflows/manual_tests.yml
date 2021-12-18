@@ -7,12 +7,12 @@ jobs:
       matrix:
         python-version: [3.6, 3.7, 3.8]
     steps:
-        - uses: action/chechkout@v2
-        - name: set up all python versions
+        - uses: action/checkout@v2
+        - name: Set up all python versions
           uses: actions/setup-python@v2
           with:
             python-version: ${{ matrix.python-version }}
             architecture: x64
         - name: install dependecies
-        - name: run test
+        - name: Run test
           run: python -m unittest discover TZ3
