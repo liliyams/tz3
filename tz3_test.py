@@ -1,5 +1,5 @@
 import unittest
-from TZ3 import tz3
+import tz3
 import math
 import time
 
@@ -46,4 +46,5 @@ class TestMax(unittest.TestCase):
         s = ' '.join(map(str, self.data_for_test))
         self.assertEqual(tz3.convert(s), self.data_for_test)
 
-# Переполнения не может возникнуть, так как программа принимает на вход только целые числа, а у целых переполнения не бывает
+# Переполнения не может возникнуть, так как программа принимает на вход только целые числа,
+# а у целых переполнения не бывает
