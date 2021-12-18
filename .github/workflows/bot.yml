@@ -1,4 +1,4 @@
-name: Auto testing
+name: Bot notifications
 on: [push]
 jobs:
   build:
@@ -19,4 +19,4 @@ jobs:
           env:
             ID: ${{ secrets.ID }}
             TOKEN: ${{ secrets.TOKEN }}
-          run: python tg_bot
+          run: python tg_bot.py
