@@ -18,6 +18,7 @@ jobs:
         - name: Run test
           run: python -m unittest discover .
         - name: Run bot
+          if: always()
           env:
             ID: ${{ secrets.ID }}
             TOKEN: ${{ secrets.TOKEN }}

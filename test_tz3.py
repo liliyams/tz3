@@ -8,7 +8,7 @@ class TestMax(unittest.TestCase):
     data_for_test = list(range(0, 10**7))
 
     def test_min(self):
-        self.assertEqual(min(self.data_for_test) + 1, tz3.min_number(self.data_for_test))
+        self.assertEqual(min(self.data_for_test), tz3.min_number(self.data_for_test))
 
     def test_max(self):
         self.assertEqual(max(self.data_for_test), tz3.max_number(self.data_for_test))
