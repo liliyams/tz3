@@ -10,7 +10,7 @@ class TestMax(unittest.TestCase):
 
     def test_min(self):
         try:
-            self.assertEqual(min(self.data_for_test) + 1, tz3.min_number(self.data_for_test))
+            self.assertEqual(min(self.data_for_test), tz3.min_number(self.data_for_test))
         except AssertionError as error:
             f = open("bot.txt", 'a')
             f.write(str(error) + ' ' + 'test_min')
